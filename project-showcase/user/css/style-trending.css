@@ -1,0 +1,297 @@
+/* =====================
+   PAGE HEADER
+===================== */
+.page-header {
+    margin-bottom: 28px;
+}
+
+.page-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
+    margin: 0 0 6px 0;
+}
+
+.page-subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* =====================
+   TRENDING LIST
+===================== */
+.trending-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.trending-card {
+    background: white;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 18px 22px;
+
+    transition: 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+
+.trending-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+    border-color: #d1d5db;
+}
+
+
+/* =====================
+   RANK BADGE
+===================== */
+.rank-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    flex-shrink: 0;
+}
+
+.rank-top {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+}
+
+.rank-normal {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+
+/* =====================
+   TRENDING IMAGE
+===================== */
+.trending-img-wrap {
+    width: 110px;
+    height: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.trending-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s;
+}
+
+.trending-card:hover .trending-img-wrap img {
+    transform: scale(1.07);
+}
+
+
+/* =====================
+   TRENDING INFO
+===================== */
+.trending-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.trending-meta {
+    margin-bottom: 5px;
+}
+
+.trending-category {
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.trending-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trending-desc {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.trending-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.trending-tags span {
+    background: #f3f4f6;
+    color: #6b7280;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+
+/* =====================
+   TRENDING RIGHT (author + stats)
+===================== */
+.trending-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+    flex-shrink: 0;
+    min-width: 140px;
+}
+
+.trending-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trending-author small {
+    color: #4b5563;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.trending-stats {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.stat-score {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    background: #f0fdf4;
+    color: #16a34a;
+
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+
+/* =====================
+   SECTION DIVIDER
+===================== */
+.section-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-bottom: 28px;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.section-divider span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #9ca3af;
+    white-space: nowrap;
+}
+
+
+/* =====================
+   EMPTY STATE
+===================== */
+.empty-trending {
+    text-align: center;
+    padding: 50px;
+    color: #9ca3af;
+}
+
+.empty-trending i {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+
+    .trending-card {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 16px;
+    }
+
+    .trending-right {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        min-width: unset;
+    }
+
+    .trending-img-wrap {
+        width: 90px;
+        height: 70px;
+    }
+
+    .rank-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+}
